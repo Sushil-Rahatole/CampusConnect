@@ -1,0 +1,70 @@
+POST http://localhost:9090/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "username":"rahul",
+    "password":"rahul",
+    "email":"rahul@gmail.com",
+    "name":"rahul"
+}
+
+###
+
+
+POST http://localhost:9090/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email":"samy@gmail.com",
+    "password":"sam123"
+}
+
+
+###
+
+POST http://localhost:9090/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email":"rahul@gmail.com",
+    "password":"rahul"
+}
+
+###
+
+
+GET http://localhost:9090/get_user_and_profile
+Content-Type: application/json
+
+{
+    "token":"b5a21e1757ab783661c50435b7815698a40292b07d11428b2ac91d634699abb48a55e6899dde128406739f467239ce576fa75374a2c00b89d42ab84e27cd7a06"
+}
+
+
+###
+
+
+POST http://localhost:9090/update_profile_data
+Content-Type: application/json
+
+{
+    "token":"b5a21e1757ab783661c50435b7815698a40292b07d11428b2ac91d634699abb48a55e6899dde128406739f467239ce576fa75374a2c00b89d42ab84e27cd7a06",
+    "bio":"Hello, I am Sam!",
+    "currentPost":"1",
+    "pastWork":[{
+        "company":"Microsoft",
+        "position":"Founder",
+        "years":"10+"
+    }],
+    "education":[
+        {
+            "school":"Harvard University",
+            "degree":"Bachelor's in Computer Science",
+            "fieldOfStudy":"Computer Science"
+        }
+    ]
+}
+
+###
+
+GET http://localhost:9090/user/get_all_users

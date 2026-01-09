@@ -1,6 +1,6 @@
 const { default: axios } = require("axios");
 
-export const BASE_URL = "http://localhost:9090";
+export const BASE_URL = "https://campusconnect-x0n9.onrender.com";
 
 
 export const clientServer = axios.create({
